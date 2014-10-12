@@ -149,6 +149,7 @@ PRODUCT_COPY_FILES +=  \
     vendor/beanstalk/prebuilt/hololauncherhd/HoloLauncherHD.apk:system/app/HoloLauncherHD.apk \
     vendor/beanstalk/prebuilt/Nova.apk:system/app/Nova.apk \
     vendor/beanstalk/prebuilt/appsetting.apk:system/app/appsetting.apk \
+    vendor/beanstalk/prebuilt/NetflixWorkaround.apk:system/app/NetflixWorkaround.apk \    
     vendor/beanstalk/prebuilt/xposed_installer.apk:system/app/xposed_installer.apk
 
 # Bring in camera effects

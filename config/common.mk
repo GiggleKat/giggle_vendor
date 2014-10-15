@@ -200,8 +200,8 @@ PRODUCT_PACKAGES += \
     audio_effects.conf \
     ScreenRecorder \
     libscreenrecorder \
-    BeanStalkPapers \
-    BeanStalkOTA \
+    BlissPapers \
+    BlissUpdater \
     Apollo \
     KernelTweaker \
     MonthCalendarWidget \
@@ -209,7 +209,7 @@ PRODUCT_PACKAGES += \
     LockClock \
     DashClock \
     CMHome \
-    StalkExplorer
+    BlissExplorer
 
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver

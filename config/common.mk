@@ -201,6 +201,7 @@ PRODUCT_PACKAGES += \
     ScreenRecorder \
     libscreenrecorder \
     BlissPapers \
+    BlissUpdater \
     Apollo \
     KernelTweaker \
     MonthCalendarWidget \

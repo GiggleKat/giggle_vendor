@@ -1,4 +1,4 @@
-PRODUCT_BRAND ?= beanstalk
+PRODUCT_BRAND ?= bliss
 
 SUPERUSER_EMBEDDED := true
 SUPERUSER_PACKAGE_PREFIX := com.android.settings.cyanogenmod.superuser
@@ -29,7 +29,7 @@ TARGET_BOOTANIMATION_SIZE := $(shell \
   fi )
 
 # get a sorted list of the sizes
-bootanimation_sizes := $(subst .zip,, $(shell ls vendor/beanstalk/prebuilt/common/bootanimation))
+bootanimation_sizes := $(subst .zip,, $(shell ls vendor/bliss/prebuilt/common/bootanimation))
 bootanimation_sizes := $(shell echo -e $(subst $(space),'\n',$(bootanimation_sizes)) | sort -rn)
 
 # find the appropriate size and set
@@ -46,7 +46,7 @@ endef
 $(foreach size,$(bootanimation_sizes), $(call check_and_set_bootanimation,$(size)))
 
 PRODUCT_COPY_FILES += \
-    vendor/beanstalk/prebuilt/common/bootanimation/$(TARGET_BOOTANIMATION_NAME).zip:system/media/bootanimation.zip
+    vendor/bliss/prebuilt/common/bootanimation/$(TARGET_BOOTANIMATION_NAME).zip:system/media/bootanimation.zip
 endif
 
 ifdef CM_NIGHTLY
@@ -87,74 +87,74 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Backup Tool
 ifneq ($(WITH_GMS),true)
 PRODUCT_COPY_FILES += \
-    vendor/beanstalk/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
-    vendor/beanstalk/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
-    vendor/beanstalk/prebuilt/common/bin/50-cm.sh:system/addon.d/50-cm.sh \
-    vendor/beanstalk/prebuilt/common/bin/blacklist:system/addon.d/blacklist
+    vendor/bliss/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
+    vendor/bliss/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
+    vendor/bliss/prebuilt/common/bin/50-cm.sh:system/addon.d/50-cm.sh \
+    vendor/bliss/prebuilt/common/bin/blacklist:system/addon.d/blacklist
 endif
 
 # init.d support
 PRODUCT_COPY_FILES += \
-    vendor/beanstalk/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
-    vendor/beanstalk/prebuilt/common/bin/sysinit:system/bin/sysinit \
-    vendor/beanstalk/prebuilt/common/bin/99-backup.sh:system/addon.d/99-backup.sh \
-    vendor/beanstalk/prebuilt/common/etc/backup.conf:system/etc/backup.conf \
-    vendor/beanstalk/prebuilt/common/etc/init.d/00check:system/etc/init.d/00check \
-    vendor/beanstalk/prebuilt/common/etc/init.d/01zipalign:system/etc/init.d/01zipalign \
-    vendor/beanstalk/prebuilt/common/etc/init.d/02sysctl:system/etc/init.d/02sysctl \
-    vendor/beanstalk/prebuilt/common/etc/init.d/03firstboot:system/etc/init.d/03firstboot \
-    vendor/beanstalk/prebuilt/common/etc/init.d/05freemem:system/etc/init.d/05freemem \
-    vendor/beanstalk/prebuilt/common/etc/init.d/06removecache:system/etc/init.d/06removecache \
-    vendor/beanstalk/prebuilt/common/etc/init.d/07fixperms:system/etc/init.d/07fixperms \
-    vendor/beanstalk/prebuilt/common/etc/init.d/09cron:system/etc/init.d/09cron \
-    vendor/beanstalk/prebuilt/common/etc/init.d/10sdboost:system/etc/init.d/10sdboost \
-    vendor/beanstalk/prebuilt/common/etc/init.d/11battery:system/etc/init.d/11battery \
-    vendor/beanstalk/prebuilt/common/etc/init.d/12touch:system/etc/init.d/12touch \
-    vendor/beanstalk/prebuilt/common/etc/init.d/13minfree:system/etc/init.d/13minfree \
-    vendor/beanstalk/prebuilt/common/etc/init.d/14gpurender:system/etc/init.d/14gpurender \
-    vendor/beanstalk/prebuilt/common/etc/init.d/15sleepers:system/etc/init.d/15sleepers \
-    vendor/beanstalk/prebuilt/common/etc/init.d/16journalism:system/etc/init.d/16journalism \
-    vendor/beanstalk/prebuilt/common/etc/init.d/17sqlite3:system/etc/init.d/17sqlite3 \
-    vendor/beanstalk/prebuilt/common/etc/init.d/18wifisleep:system/etc/init.d/18wifisleep \
-    vendor/beanstalk/prebuilt/common/etc/init.d/19iostats:system/etc/init.d/19iostats \
-    vendor/beanstalk/prebuilt/common/etc/init.d/20setrenice:system/etc/init.d/20setrenice \
-    vendor/beanstalk/prebuilt/common/etc/init.d/21tweaks:system/etc/init.d/21tweaks \
-    vendor/beanstalk/prebuilt/common/etc/init.d/24speedy_modified:system/etc/init.d/24speedy_modified \
-    vendor/beanstalk/prebuilt/common/etc/init.d/25loopy_smoothness_tweak:system/etc/init.d/25loopy_smoothness_tweak \
-    vendor/beanstalk/prebuilt/common/etc/init.d/98tweaks:system/etc/init.d/98tweaks \
-    vendor/beanstalk/prebuilt/common/etc/helpers.sh:system/etc/helpers.sh \
-    vendor/beanstalk/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf \
-    vendor/beanstalk/prebuilt/common/etc/init.d.cfg:system/etc/init.d.cfg
+    vendor/bliss/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
+    vendor/bliss/prebuilt/common/bin/sysinit:system/bin/sysinit \
+    vendor/bliss/prebuilt/common/bin/99-backup.sh:system/addon.d/99-backup.sh \
+    vendor/bliss/prebuilt/common/etc/backup.conf:system/etc/backup.conf \
+    vendor/bliss/prebuilt/common/etc/init.d/00check:system/etc/init.d/00check \
+    vendor/bliss/prebuilt/common/etc/init.d/01zipalign:system/etc/init.d/01zipalign \
+    vendor/bliss/prebuilt/common/etc/init.d/02sysctl:system/etc/init.d/02sysctl \
+    vendor/bliss/prebuilt/common/etc/init.d/03firstboot:system/etc/init.d/03firstboot \
+    vendor/bliss/prebuilt/common/etc/init.d/05freemem:system/etc/init.d/05freemem \
+    vendor/bliss/prebuilt/common/etc/init.d/06removecache:system/etc/init.d/06removecache \
+    vendor/bliss/prebuilt/common/etc/init.d/07fixperms:system/etc/init.d/07fixperms \
+    vendor/bliss/prebuilt/common/etc/init.d/09cron:system/etc/init.d/09cron \
+    vendor/bliss/prebuilt/common/etc/init.d/10sdboost:system/etc/init.d/10sdboost \
+    vendor/bliss/prebuilt/common/etc/init.d/11battery:system/etc/init.d/11battery \
+    vendor/bliss/prebuilt/common/etc/init.d/12touch:system/etc/init.d/12touch \
+    vendor/bliss/prebuilt/common/etc/init.d/13minfree:system/etc/init.d/13minfree \
+    vendor/bliss/prebuilt/common/etc/init.d/14gpurender:system/etc/init.d/14gpurender \
+    vendor/bliss/prebuilt/common/etc/init.d/15sleepers:system/etc/init.d/15sleepers \
+    vendor/bliss/prebuilt/common/etc/init.d/16journalism:system/etc/init.d/16journalism \
+    vendor/bliss/prebuilt/common/etc/init.d/17sqlite3:system/etc/init.d/17sqlite3 \
+    vendor/bliss/prebuilt/common/etc/init.d/18wifisleep:system/etc/init.d/18wifisleep \
+    vendor/bliss/prebuilt/common/etc/init.d/19iostats:system/etc/init.d/19iostats \
+    vendor/bliss/prebuilt/common/etc/init.d/20setrenice:system/etc/init.d/20setrenice \
+    vendor/bliss/prebuilt/common/etc/init.d/21tweaks:system/etc/init.d/21tweaks \
+    vendor/bliss/prebuilt/common/etc/init.d/24speedy_modified:system/etc/init.d/24speedy_modified \
+    vendor/bliss/prebuilt/common/etc/init.d/25loopy_smoothness_tweak:system/etc/init.d/25loopy_smoothness_tweak \
+    vendor/bliss/prebuilt/common/etc/init.d/98tweaks:system/etc/init.d/98tweaks \
+    vendor/bliss/prebuilt/common/etc/helpers.sh:system/etc/helpers.sh \
+    vendor/bliss/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf \
+    vendor/bliss/prebuilt/common/etc/init.d.cfg:system/etc/init.d.cfg
 
 # Added xbin files
 PRODUCT_COPY_FILES += \
-    vendor/beanstalk/prebuilt/common/xbin/zip:system/xbin/zip \
-    vendor/beanstalk/prebuilt/common/xbin/zipalign:system/xbin/zipalign
+    vendor/bliss/prebuilt/common/xbin/zip:system/xbin/zip \
+    vendor/bliss/prebuilt/common/xbin/zipalign:system/xbin/zipalign
 
 # userinit support
 PRODUCT_COPY_FILES += \
-    vendor/beanstalk/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
+    vendor/bliss/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
 
 # Copy libgif for Nova Launcher 3.0
 PRODUCT_COPY_FILES += \
-    vendor/beanstalk/prebuilt/common/lib/libgif.so:system/lib/libgif.so
+    vendor/bliss/prebuilt/common/lib/libgif.so:system/lib/libgif.so
 
 PRODUCT_COPY_FILES += \
-    vendor/beanstalk/prebuilt/common/etc/init.local.rc:root/init.cm.rc
+    vendor/bliss/prebuilt/common/etc/init.local.rc:root/init.cm.rc
 
 # Copy JNI libarary of Term
 PRODUCT_COPY_FILES +=  \
-    vendor/beanstalk/proprietary/Term.apk:system/app/Term.apk \
-    vendor/beanstalk/proprietary/lib/armeabi/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so \
-    vendor/beanstalk/prebuilt/hololauncherhd/HoloLauncherHD.apk:system/app/HoloLauncherHD.apk \
-    vendor/beanstalk/prebuilt/Nova.apk:system/app/Nova.apk \
-    vendor/beanstalk/prebuilt/appsetting.apk:system/app/appsetting.apk \
-    vendor/beanstalk/prebuilt/xposed_installer.apk:system/app/xposed_installer.apk
+    vendor/bliss/proprietary/Term.apk:system/app/Term.apk \
+    vendor/bliss/proprietary/lib/armeabi/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so \
+    vendor/bliss/prebuilt/hololauncherhd/HoloLauncherHD.apk:system/app/HoloLauncherHD.apk \
+    vendor/bliss/prebuilt/Nova.apk:system/app/Nova.apk \
+    vendor/bliss/prebuilt/appsetting.apk:system/app/appsetting.apk \
+    vendor/bliss/prebuilt/xposed_installer.apk:system/app/xposed_installer.apk
 
 # Bring in camera effects
 PRODUCT_COPY_FILES +=  \
-    vendor/beanstalk/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
-    vendor/beanstalk/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
+    vendor/bliss/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
+    vendor/bliss/prebuilt/common/media/PFFprec_600.emd:system/media/PFFprec_600.emd
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
@@ -166,14 +166,14 @@ PRODUCT_COPY_FILES += \
 
 # This is CM!
 PRODUCT_COPY_FILES += \
-    vendor/beanstalk/config/permissions/com.cyanogenmod.android.xml:system/etc/permissions/com.cyanogenmod.android.xml
+    vendor/bliss/config/permissions/com.cyanogenmod.android.xml:system/etc/permissions/com.cyanogenmod.android.xml
 
 # Don't export PS1 in /system/etc/mkshrc.
 PRODUCT_COPY_FILES += \
-    vendor/beanstalk/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf
+    vendor/bliss/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf
 
 # T-Mobile theme engine
-include vendor/beanstalk/config/themes_common.mk
+include vendor/bliss/config/themes_common.mk
 
 # Required CM packages
 PRODUCT_PACKAGES += \
@@ -263,8 +263,8 @@ PRODUCT_PACKAGES += \
 
 # HFM Files
 PRODUCT_COPY_FILES += \
-    vendor/beanstalk/prebuilt/etc/hosts.alt:system/etc/hosts.alt \
-    vendor/beanstalk/prebuilt/etc/hosts.og:system/etc/hosts.og
+    vendor/bliss/prebuilt/etc/hosts.alt:system/etc/hosts.alt \
+    vendor/bliss/prebuilt/etc/hosts.og:system/etc/hosts.og
 
 # Stagefright FFMPEG plugin
 PRODUCT_PACKAGES += \
@@ -273,11 +273,11 @@ PRODUCT_PACKAGES += \
     libFFmpegExtractor \
     libnamparser
 
-PRODUCT_PACKAGE_OVERLAYS += vendor/beanstalk/overlay/dictionaries
-PRODUCT_PACKAGE_OVERLAYS += vendor/beanstalk/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/bliss/overlay/dictionaries
+PRODUCT_PACKAGE_OVERLAYS += vendor/bliss/overlay/common
 
-# Beanstalk Versioning System
--include vendor/beanstalk/config/versions.mk
+# Bliss Versioning System
+-include vendor/bliss/config/versions.mk
 
 -include vendor/cm-priv/keys/keys.mk
 

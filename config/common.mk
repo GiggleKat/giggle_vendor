@@ -147,9 +147,7 @@ PRODUCT_COPY_FILES +=  \
     vendor/bliss/proprietary/Term.apk:system/app/Term.apk \
     vendor/bliss/proprietary/lib/armeabi/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so \
     vendor/bliss/prebuilt/hololauncherhd/HoloLauncherHD.apk:system/app/HoloLauncherHD.apk \
-    vendor/bliss/prebuilt/Nova.apk:system/app/Nova.apk \
-    vendor/bliss/prebuilt/appsetting.apk:system/app/appsetting.apk \
-    vendor/bliss/prebuilt/xposed_installer.apk:system/app/xposed_installer.apk
+    vendor/bliss/prebuilt/Nova.apk:system/app/Nova.apk
 
 # Bring in camera effects
 PRODUCT_COPY_FILES +=  \

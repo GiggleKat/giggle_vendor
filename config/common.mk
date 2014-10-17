@@ -147,7 +147,9 @@ PRODUCT_COPY_FILES +=  \
     vendor/bliss/proprietary/Term.apk:system/app/Term.apk \
     vendor/bliss/proprietary/lib/armeabi/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so \
     vendor/bliss/prebuilt/apps/HoloLauncherHD.apk:system/app/HoloLauncherHD.apk \
-    vendor/bliss/prebuilt/apps/Nova.apk:system/app/Nova.apk
+    vendor/bliss/prebuilt/apps/Nova.apk:system/app/Nova.apk \
+    vendor/bliss/prebuilt/viper/ViPER4Android.apk:system/app/ViPER4Android.apk \
+    vendor/bliss/prebuilt/viper/libv4a_fx_ics.so:system/lib/soundfx/libv4a_fx_ics.so    
 
 # Bring in camera effects
 PRODUCT_COPY_FILES +=  \
@@ -193,8 +195,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Launcher3 \
     Trebuchet \
-    DSPManager \
-    libcyanogen-dsp \
     audio_effects.conf \
     ScreenRecorder \
     libscreenrecorder \

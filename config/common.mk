@@ -135,7 +135,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/bliss/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
 
-# Copy libgif for Nova Launcher 3.0
+# Copy libgif for Nova Launcher 3.1
 PRODUCT_COPY_FILES += \
     vendor/bliss/prebuilt/common/lib/libgif.so:system/lib/libgif.so
 
@@ -146,8 +146,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES +=  \
     vendor/bliss/proprietary/Term.apk:system/app/Term.apk \
     vendor/bliss/proprietary/lib/armeabi/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so \
-    vendor/bliss/prebuilt/hololauncherhd/HoloLauncherHD.apk:system/app/HoloLauncherHD.apk \
-    vendor/bliss/prebuilt/Nova.apk:system/app/Nova.apk
+    vendor/bliss/prebuilt/apps/HoloLauncherHD.apk:system/app/HoloLauncherHD.apk \
+    vendor/bliss/prebuilt/apps/Nova.apk:system/app/Nova.apk
 
 # Bring in camera effects
 PRODUCT_COPY_FILES +=  \

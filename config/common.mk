@@ -206,7 +206,7 @@ PRODUCT_PACKAGES += \
 
 # SuperSu    
 PRODUCT_PACKAGES += \
-    SuperSu    
+    Superuser    
 
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver

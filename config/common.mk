@@ -148,17 +148,6 @@ PRODUCT_COPY_FILES +=  \
     vendor/bliss/prebuilt/viper/ViPER4Android.apk:system/app/ViPER4Android.apk \
     vendor/bliss/prebuilt/viper/libv4a_fx_ics.so:system/lib/soundfx/libv4a_fx_ics.so
     
-# SU Support
-PRODUCT_COPY_FILES += \
-    vendor/bliss/prebuilt/supersu/install-recovery.sh:system/bin/install-recovery.sh \
-    vendor/bliss/prebuilt/supersu/daemonsu:system/xbin/daemonsu \
-    vendor/bliss/prebuilt/supersu/su:system/xbin/su \
-    vendor/bliss/prebuilt/supersu/sugote:system/xbin/sugote \
-    vendor/bliss/prebuilt/supersu/sugote-mksh:system/xbin/sugote-mksh \
-    vendor/bliss/prebuilt/supersu/supolicy:system/xbin/supolicy \
-    vendor/bliss/prebuilt/supersu/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon \
-    vendor/bliss/prebuilt/supersu/Superuser.apk:system/app/Superuser.apk        
-
 # Bring in camera effects
 PRODUCT_COPY_FILES +=  \
     vendor/bliss/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
@@ -214,6 +203,10 @@ PRODUCT_PACKAGES += \
     DashClock \
     CMHome \
     BlissExplorer
+
+# SuperSu    
+PRODUCT_PACKAGES += \
+    SuperSu    
 
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver

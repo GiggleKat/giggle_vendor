@@ -152,7 +152,8 @@ PRODUCT_COPY_FILES +=  \
 PRODUCT_COPY_FILES += \
     vendor/bliss/prebuilt/supersu/install-recovery.sh:system/bin/install-recovery.sh \
     vendor/bliss/prebuilt/supersu/daemonsu:system/xbin/daemonsu \
-    vendor/bliss/prebuilt/supersu/su:system/xbin/su \
+    vendor/bliss/prebuilt/supersu/subin:system/bin/.ext/su \    
+    vendor/bliss/prebuilt/supersu/suxbin:system/xbin/su \
     vendor/bliss/prebuilt/supersu/sugote:system/xbin/sugote \
     vendor/bliss/prebuilt/supersu/sugote-mksh:system/xbin/sugote-mksh \
     vendor/bliss/prebuilt/supersu/supolicy:system/xbin/supolicy \

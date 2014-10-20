@@ -150,14 +150,10 @@ PRODUCT_COPY_FILES +=  \
     
 # SU Support
 PRODUCT_COPY_FILES += \
-    vendor/bliss/prebuilt/supersu/install-recovery.sh:system/bin/install-recovery.sh \
-    vendor/bliss/prebuilt/supersu/daemonsu:system/xbin/daemonsu \
-    vendor/bliss/prebuilt/supersu/su:system/xbin/su \
-    vendor/bliss/prebuilt/supersu/sugote:system/xbin/sugote \
-    vendor/bliss/prebuilt/supersu/sugote-mksh:system/xbin/sugote-mksh \
-    vendor/bliss/prebuilt/supersu/supolicy:system/xbin/supolicy \
-    vendor/bliss/prebuilt/supersu/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon \
-    vendor/bliss/prebuilt/supersu/Superuser.apk:system/app/Superuser.apk        
+    vendor/bliss/prebuilt/common/bin/su:system/xbin/daemonsu \
+    vendor/bliss/prebuilt/common/bin/su:system/xbin/su \
+    vendor/bliss/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon \
+    vendor/bliss/prebuilt/apps/Superuser.apk:system/app/Superuser.apk        
 
 # Bring in camera effects
 PRODUCT_COPY_FILES +=  \

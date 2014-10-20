@@ -1,5 +1,8 @@
 PRODUCT_BRAND ?= bliss
 
+SUPERUSER_EMBEDDED := true
+SUPERUSER_PACKAGE_PREFIX := com.android.settings.cyanogenmod.superuser
+
 # To deal with CM9 specifications
 # TODO: remove once all devices have been switched
 ifneq ($(TARGET_BOOTANIMATION_NAME),)
@@ -146,14 +149,7 @@ PRODUCT_COPY_FILES +=  \
     vendor/bliss/prebuilt/apps/HoloLauncherHD.apk:system/app/HoloLauncherHD.apk \
     vendor/bliss/prebuilt/apps/Nova.apk:system/app/Nova.apk \
     vendor/bliss/prebuilt/viper/ViPER4Android.apk:system/app/ViPER4Android.apk \
-    vendor/bliss/prebuilt/viper/libv4a_fx_ics.so:system/lib/soundfx/libv4a_fx_ics.so
-    
-# SU Support
-PRODUCT_COPY_FILES += \
-    vendor/bliss/prebuilt/common/bin/su:system/xbin/daemonsu \
-    vendor/bliss/prebuilt/common/bin/su:system/xbin/su \
-    vendor/bliss/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon \
-    vendor/bliss/prebuilt/apps/Superuser.apk:system/app/Superuser.apk        
+    vendor/bliss/prebuilt/viper/libv4a_fx_ics.so:system/lib/soundfx/libv4a_fx_ics.so    
 
 # Bring in camera effects
 PRODUCT_COPY_FILES +=  \
@@ -183,7 +179,9 @@ include vendor/bliss/config/themes_common.mk
 PRODUCT_PACKAGES += \
     Development \
     BluetoothExt \
-    LatinIME
+    LatinIME \
+    Superuser \
+    su
 
 # Optional CM packages
 PRODUCT_PACKAGES += \

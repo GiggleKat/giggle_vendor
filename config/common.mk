@@ -135,7 +135,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/bliss/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
 
-# Copy libgif for Nova Launcher 3.1
+# Copy libgif for Nova Launcher 3.2
 PRODUCT_COPY_FILES += \
     vendor/bliss/prebuilt/common/lib/libgif.so:system/lib/libgif.so
 

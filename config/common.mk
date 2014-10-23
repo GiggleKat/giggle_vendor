@@ -201,7 +201,8 @@ PRODUCT_PACKAGES += \
     LockClock \
     DashClock \
     CMHome \
-    BlissExplorer
+    CMFileManager \
+    CMWallPapers
 
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver

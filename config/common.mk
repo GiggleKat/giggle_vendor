@@ -145,7 +145,7 @@ PRODUCT_COPY_FILES += \
 # Copy JNI libarary of Term
 PRODUCT_COPY_FILES +=  \
     vendor/bliss/prebuilt/apps/Term.apk:system/app/Term.apk \
-    vendor/bliss/prebuilt/common/lib/armeabi/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so \
+    vendor/bliss/prebuilt/common/lib/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so \
     vendor/bliss/prebuilt/viper/ViPER4Android.apk:system/app/ViPER4Android.apk \
     vendor/bliss/prebuilt/viper/libv4a_fx_ics.so:system/lib/soundfx/libv4a_fx_ics.so    
 

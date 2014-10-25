@@ -202,7 +202,7 @@ PRODUCT_PACKAGES += \
     DashClock \
     CMHome \
     CMFileManager \
-    CMWallPapers
+    CMWallpapers
 
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver

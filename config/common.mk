@@ -1,6 +1,6 @@
 PRODUCT_BRAND ?= bliss
 
-SUPERUSER_EMBEDDED := true
+SUPERUSER_EMBEDDED := false
 SUPERUSER_PACKAGE_PREFIX := com.android.settings.cyanogenmod.superuser
 
 # To deal with CM9 specifications
@@ -143,7 +143,15 @@ PRODUCT_COPY_FILES +=  \
     vendor/bliss/prebuilt/apps/Term.apk:system/app/Term.apk \
     vendor/bliss/prebuilt/common/lib/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so \
     vendor/bliss/prebuilt/viper/ViPER4Android.apk:system/app/ViPER4Android.apk \
-    vendor/bliss/prebuilt/viper/libv4a_fx_ics.so:system/lib/soundfx/libv4a_fx_ics.so    
+    vendor/bliss/prebuilt/viper/libv4a_fx_ics.so:system/lib/soundfx/libv4a_fx_ics.so  
+    
+# SuperSu Flasher
+PRODUCT_COPY_FILES += \
+    vendor/bliss/prebuilt/common/bin/supersuflasher.sh:system/bin/supersuflasher.sh
+
+# SuperSU
+PRODUCT_COPY_FILES += \
+    vendor/bliss/prebuilt/SuperSU/SuperSU.zip:system/etc/supersu.zip      
 
 # Bring in camera effects
 PRODUCT_COPY_FILES +=  \

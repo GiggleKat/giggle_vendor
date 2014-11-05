@@ -1,6 +1,6 @@
 PRODUCT_BRAND ?= gigglekat
 
-SUPERUSER_EMBEDDED := true
+SUPERUSER_EMBEDDED := false
 SUPERUSER_PACKAGE_PREFIX := com.android.settings.cyanogenmod.superuser
 
 # To deal with CM9 specifications
@@ -144,6 +144,14 @@ PRODUCT_COPY_FILES +=  \
     vendor/gigglekat/prebuilt/common/lib/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so \
     vendor/gigglekat/prebuilt/viper/ViPER4Android.apk:system/app/ViPER4Android.apk \
     vendor/gigglekat/prebuilt/viper/libv4a_fx_ics.so:system/lib/soundfx/libv4a_fx_ics.so    
+
+# SuperSu Flasher
+PRODUCT_COPY_FILES += \
+    vendor/gigglekat/prebuilt/common/bin/supersuflasher.sh:system/bin/supersuflasher.sh
+
+# SuperSU
+PRODUCT_COPY_FILES += \
+    vendor/gigglekat/prebuilt/SuperSU/SuperSU.zip:system/etc/supersu.zip      
 
 # Bring in camera effects
 PRODUCT_COPY_FILES +=  \

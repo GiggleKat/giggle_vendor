@@ -20,7 +20,7 @@ endif
 # Set Unofficial if no buildtype set (Buildtype should ONLY be set by GiggleKat Devs!)
 ifdef GIGGLEKAT_BUILDTYPE
 else
-GIGGLEKAT_BUILDTYPE := OFFICIAL
+GIGGLEKAT_BUILDTYPE := NIGHTLY
 GIGGLEKAT_VERSION_MAJOR := 1.0
 GIGGLEKAT_VERSION_MINOR := 
 endif
